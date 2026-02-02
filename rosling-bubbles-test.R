@@ -81,3 +81,11 @@ viz <- animint(
 out_dir <- "yihui_test_final_clean"
 if(dir.exists(out_dir)) unlink(out_dir, recursive = TRUE)
 animint2dir(viz, out.dir = out_dir, open.browser = TRUE)
+
+#error: 
+#library(animint2)
+#library(ggplot2) # This masks the interactive features of animint2
+
+# This will fail
+#ggplot(iris, aes(Sepal.Length, Sepal.Width)) + 
+#  geom_point(clickSelects = "Species")
